@@ -1,9 +1,12 @@
+/*
+  *     ADMINISTRATIV - NU MODIFICATI
+  */
 #include <iostream>
 #include <string>
 #include <vector>
 #include <list>
 
-#include "Solution/rezolvareCerinte.h"
+#include "Solution/RezolvareQueries.h"
 #include "Solution/Product/ResealedProduct.h"
 #include "Solution/Product/FoodProduct.h"
 #include "Solution/Server/Server.h"
@@ -16,14 +19,15 @@
 
 using namespace std;
 
-// Singleton Instance
+
+ /* Instanta Singleton */
 Server *Server::instance = 0;
 
 int main(int argc, char **argv)
 {
   json result;
   TestHelper p(argv[1]);
-  RezolvareCerinte rez;
+  RezolvareQueries rez;
 
   try {
     if (argc != 4)
@@ -70,7 +74,7 @@ int main(int argc, char **argv)
         result = p.TestCerinta4();
         break;
       case 12:
-        result = p.TestCerinta5();
+        result = p.TestCerinta5(argv[1]);
         break;
       default:
         break;

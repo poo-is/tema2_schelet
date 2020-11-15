@@ -20,19 +20,10 @@ Server *Server::GetInstance()
 Server::~Server()
 {
 	if (instance != NULL)
-	{
 		instance = NULL;
-		if (!__ProductID__ProductObj__.empty())
-			__ProductID__ProductObj__.clear();
-		if (!__UserID__ProductsCart__.empty())
-			__UserID__ProductsCart__.clear();
-	}
-}
 
-// SET
-void Server::set__ProductID__ProductObj__()
-{
-	throw("undefined");
+	if (!__UserID__ProductsCart__.empty())
+		__UserID__ProductsCart__.clear();
 }
 
 void Server::set__UserID__ProductsCart__()
@@ -40,17 +31,12 @@ void Server::set__UserID__ProductsCart__()
 	throw("undefined");
 }
 
-// GET
 list<Product *> &Server::getProductsList()
 {
 	throw("undefined");
 }
-list<User *> &Server::getUsersList()
-{
-	throw("undefined");
-}
 
-map<int, Product *> Server::get__ProductID__ProductObj__()
+list<User *> &Server::getUsersList()
 {
 	throw("undefined");
 }
@@ -70,7 +56,6 @@ void Server::populateUsers(const json &input)
 	usr = ObjectFactory::getUserList(input["useri"]);
 }
 
-// REQUESTS
 bool Server::requestAddProduct(int userID, int productID, int quantity)
 {
 	throw("undefined");
