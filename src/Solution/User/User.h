@@ -32,16 +32,28 @@ public:
     */
   virtual ~User() = 0;
 
+  /*
+  * Constructor fara parametri
+  */
   User();
+  /*
+  * Constructor cu parametri
+  */
   User(const string &, const string &, const string &, int, const string &, int, const string &, const string &, const string &, int, const string &, int, int, const string &, const string &, const string &);
+  /*
+  * Constructor de copiere
+  */
   User(const User &);
 
-  // Operator =
+
+  /*
+  * Operator =
+  */
   const User &operator=(const User &);
 
-   /*
-    * @param seteaza campul lastName (nume de familie)
-    */
+  /*
+  * @param seteaza campul lastName (nume de familie)
+  */
   void setLastName(const string &);
   /*
    * @param seteaza campul firstName (prenume)

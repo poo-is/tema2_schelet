@@ -7,16 +7,26 @@ using namespace std;
 class PremiumUser : public User
 {
 protected:
-  map<int, int> discounts; // idProdus-discountPercentage
+  map<int, int> discounts;
   int premiumSubscriptionCost;
 
 public:
-  // Constructori
+  /*
+  * Constructor fara parametri
+  */
   PremiumUser();
+  /*
+  * Constructor cu parametri
+  */
   PremiumUser(const string &, const string &, const string &, int, const string &, int, const string &, const string &, const string &, int, const string &, int, int, const string &, const string &, const string &, int, const map<int, int> &);
+  /*
+  * Constructor de copiere
+  */
   PremiumUser(const PremiumUser &);
 
-  // Operator =
+  /*
+  * Operator =
+  */
   const PremiumUser &operator=(const PremiumUser &);
 
   /*
@@ -46,8 +56,7 @@ public:
   /*
    *     ADMINISTRATIV - NU MODIFICATI
    */
-  json
-  toJSON();
+  json toJSON();
   void displayUser();
   NLOHMANN_DEFINE_TYPE_INTRUSIVE(PremiumUser, billingData, deliveryData, lastName, firstName, email, UserID, premiumSubscriptionCost, discounts)
 };

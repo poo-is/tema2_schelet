@@ -1,3 +1,6 @@
+/*
+* Administrativ - NU MODIFICATI NIMIC
+*/
 #pragma once
 #include <string>
 #include <iostream>
@@ -6,33 +9,31 @@
 #include "../Solution/Product/FoodProduct.h"
 #include "../Solution/LRUCache/LRUCache.h"
 #include "../json.hpp"
-#include "../Solution/RezolvareQueries.h"
+#include "../Solution/QuerySolver.h"
 #include "JSONSerializer.h"
 #include "FinalQuestionsHelper.h"
 
-// Administrativ - NU MODIFICATI NIMIC
-
 using json = nlohmann::json;
-
 class TestHelper 
 {
-  Server *server;
-  RezolvareQueries rezolvatorul;
-  json input;
-  public:
-    TestHelper(const string&);
-    ~TestHelper();
-    void Init();
-    json TestIerarhieClasaProdus(); // Test 1
-    json TestIerarhieClasaUser();   // Test 2
-    json TestClasaCosProduse();     // Test 3
-    json TestCerinta2();
-    json TestCerinta3a();
-    json TestCerinta3b();
-    json TestCerinta3c();          
-    json TestCerinta3d();           
-    json TestCerinta3e();
-    json TestCerinta3f();
-    json TestCerinta4();      // Test 4
-    json TestCerinta5(const string&);
+	Server *server;
+	QuerySolver rezolvatorul;
+	json input;
+  	
+	public:
+		TestHelper(const string&);
+		~TestHelper();
+		void Init();
+		json TestProductClass(); 
+		json TestUserClass();   
+		json TestCartClass();     
+		json Test_2();
+		json Test_3a();
+		json Test_3b();
+		json Test_3c();          
+		json Test_3d();           
+		json Test_3e();
+		json Test_3f();
+		json Test_4();      
+		json Test_5(const string&);
 };
