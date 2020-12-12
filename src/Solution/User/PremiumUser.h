@@ -12,23 +12,21 @@ protected:
 
 public:
   /*
-  * Constructor fara parametri
-  */
+   * Constructor fara parametri
+   */
   PremiumUser();
   /*
-  * Constructor cu parametri
-  */
+   * Constructor cu parametri
+   */
   PremiumUser(const string &, const string &, const string &, int, const string &, int, const string &, const string &, const string &, int, const string &, int, int, const string &, const string &, const string &, int, const map<int, int> &);
   /*
-  * Constructor de copiere
-  */
+   * Constructor de copiere
+   */
   PremiumUser(const PremiumUser &);
-
   /*
-  * Operator =
-  */
+   * Operator =
+   */
   const PremiumUser &operator=(const PremiumUser &);
-
   /*
    * @param seteaza campul Discounts (reduceri) cu 
    */

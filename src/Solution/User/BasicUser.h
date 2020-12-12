@@ -19,12 +19,10 @@ public:
   * Constructor de copiere
   */
   BasicUser(const BasicUser &);
-
   /*
   * Operator =
   */
   BasicUser &operator=(const BasicUser &);
-
   /*
    * @param seteaza TransportCost (costul transportului)
    */
